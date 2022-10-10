@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url(3.jpg);
+    background-size: cover;
+}
+/* book */
+.book{
+    position: relative;
+    width: 500px;
+    height: 700px;
+    transition: transform 0.5s;
+}
+
+.paper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front, .back{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front{
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid #591212;
+}
+
+.back{
+    z-index: 0;
+}
+
+.front-content, .back-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 90px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1{
+    z-index: 3;
+}
+
+#p2{
+    z-index: 2;
+}
+#p3{
+    z-index: 1;
+}
+
+.front #f1{
+    background-image: url(backflip.png);
+    font-family: Bahnschrift;
+    color: white;
+    font-size: 30px;
+}
+
+.back #b1{
+    background-image: url(backflip2.png);
+    color: white;
+}
+
+h1{
+    font-family: Bradley Hand ITC;
+    font-size: 50px;
+}
+
+#b1 h1{
+    margin-top: -50px;
+}
+
+.front #f2{
+    background-image: url(backflip3.png);
+    color: white;
+}
+
+.back #b2{
+    background-image: url();
+}
+
+#logo{
+    width: 200px;
+    display: inline;
+    position: absolute;
+    margin-top: -300px;
+}
+
+#kata{
+    font-size: 25px;
+    font-family: pristina;
+    width: 400px;
+    display: block;
+    position: absolute;
+    margin-top: 250px;
+}
+
+#filosofi{
+    font-size: 25px;
+    font-family: pristina;
+    width: 400px;
+    display: block;
+    position: absolute;
+    margin-top: 450px;
+}
+
+#page2{
+    width: 120px;
+    position: absolute;
+    margin-top: -435px;
+    margin-left: 200px;
+}
+
+table{
+    font-family: gabriola;
+    font-size: 23px;
+}
+
+.log{
+    position: absolute;
+    width: 100px;
+    margin-top: 600px;
+    margin-right: -380px;
+}
+
+#coffee-1{
+    position: absolute;
+    display: block;
+    margin-top: 350px;
+    margin-left: 100px;
+    width: 500px;
+}
+
+#coffee-1 td{
+    width: 150px;
+    line-height: 40px;
+}
+
+#coffee-2{
+    margin-left: 350px;
+    position: absolute;
+    display: block;
+    margin-top: 350px;
+    width: 300px;
+}
+
+#coffee-2 td{
+    width: 150px;
+    line-height: 40px;
+}
+
+#f2 h1{
+    margin-top: -630px;
+    margin-left: -250px;
+}
+
+.ice{
+    position: absolute;
+    display: block;
+    margin-left: 300px;
+    margin-top: 200px;
+    width: 700px;
+}
+
+.ice td{
+    width: 400px;
+}
+
+.back, .front{
+    background-image: url(backflip4.png);
+    color: white;
+}
+
+
+
+.back h1, #f3 h1{
+    margin-top: -600px;
+    margin-left: -300px;
+}
+
+hr{
+    color: white;
+    background-color: white;
+    width: 300px;
+    height: 5px;
+    position: absolute;
+    display: block;
+    margin-top: -600px;
+    margin-left: 200px;
+}
+
+#b3 h1{
+    margin-left: -250px;
+}
+
+#b3 hr{
+    color: white;
+    background-color: white;
+    width: 250px;
+    height: 5px;
+    position: absolute;
+    display: block;
+    margin-top: -600px;
+    margin-left: 250px;
+}
+
+#b2 h1{
+    position: absolute;
+}
+
+.tempe{
+    position: absolute;
+    margin-left: 150px;
+    margin-right: 50px;
+    margin-top: -420px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.tempe img{
+    width: 130px;
+    position: absolute;
+    margin-left: -135px;
+}
+
+.kentang{
+    position: absolute;
+    margin-left: 150px;
+    margin-right: 50px;
+    margin-top: -150px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.kentang img{
+    margin-left: -150px;
+    position: absolute;
+    width: 130px;
+}
+
+.tahu{
+    position: absolute;
+    margin-left: 150px;
+    margin-right: 50px;
+    margin-top: 175px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.tahu img{
+    position: absolute;
+    margin-left: -145px;
+    width: 140px;
+}
+
+.pancake{
+    position: absolute;
+    margin-left: 250px;
+    margin-right: 50px;
+    margin-top: 480px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.pancake img{
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 20px;
+    width: 130px;
+}
+
+.nasgor{
+    position: absolute;
+    margin-left: 170px;
+    margin-right: 50px;
+    margin-top: -380px;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.nasgor img{
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 10px;
+    width: 130px;
+    height: 100px;
+}
+
+.chicken{
+    position: absolute;
+    margin-left: 170px;
+    margin-right: 50px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.chicken img{
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 10px;
+    width: 130px;
+    height: 100px;
+}
+
+.pan{
+    position: absolute;
+    margin-left: 170px;
+    margin-right: 50px;
+    margin-top: 450px;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.pan img{
+    position: absolute;
+    margin-left: -150px;
+    margin-top:-10px;
+    width: 130px;
+}
+
+.minum{
+    position: absolute;
+    margin-left: -300px;
+}
+
+#b3 h1{
+    position: absolute;
+    margin-left: -300px;
+    font-size: 45px;
+    color: black;
+}
+
+#b3 hr{
+    width: 270px;
+    margin-left: 230px;
+}
+
+#tea{
+    position: absolute;
+    margin-left: 300px;
+    margin-right: 50px;
+    margin-top: -380px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+#tea table{
+    width: 300px;
+}
+
+#tea h2, #coklat h2{
+    font-size: 35px;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+#tea hr{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+#coklat{
+    position: absolute;
+    margin-left: 260px;
+    margin-right: 50px;
+    margin-top: 250px;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+#coklat table{
+    width: 260px;
+}
